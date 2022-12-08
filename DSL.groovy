@@ -14,6 +14,12 @@ void createPipeline(it) {
     pipelineJob(jobname) {
         description(desc)
 
+
+        parameters {
+            booleanParam('FLAG', true)
+            choiceParam('OPTION', ['option 1 (default)', 'option 2', 'option 3'])
+        }
+
         definition {
             cpsScm {
                 scm {
